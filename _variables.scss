@@ -31,3 +31,10 @@ $black-color: #000;
     align-items: center;
     gap: $gap;
 }
+
+
+@mixin h1-text-mobile {
+    font-size: 2.3em;
+    font-weight: 400;
+    color: $white-color;
+}
