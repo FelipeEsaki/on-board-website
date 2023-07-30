@@ -1,0 +1,33 @@
+$primary-color: #181818;
+$secondary-color: #021941;
+$text-color: #cecdcd;
+$btn-color: #27ffff;
+$aqua-color: #9dffff;
+$white-color: #fff;
+$black-color: #000;
+
+@mixin h1-text {
+    font-size: 2.5em;
+    font-weight: 400;
+    color: $white-color;
+}
+
+@mixin h2-text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $text-color;
+}
+
+@mixin p-text {
+    font-size: 1rem;
+    color: $text-color;
+    font-weight: 300;
+}
+
+@mixin displayFlex ($direction, $justify, $gap) {
+    flex-direction: $direction;
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    gap: $gap;
+}
