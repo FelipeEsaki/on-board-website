@@ -48,7 +48,7 @@ header #btn-menu {
     gap: 20px;
   }
   header #menu {
-    display: flex;
+    display: none;
     justify-content: space-between;
     list-style: none;
     gap: 25px;
