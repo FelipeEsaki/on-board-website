@@ -5,7 +5,7 @@ header {
     align-items: center;
     padding: 60px 0;
 
-    ul {
+    #menu {
         display: flex;
         list-style: none;
         gap: 25px;
@@ -39,6 +39,10 @@ header {
         width: 200px;
     }
 
+    #btn-menu {
+        display: none;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -46,42 +50,53 @@ header {
     header {
         margin: auto;
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        padding: 60px 0;
+        padding: 40px 0;
+        gap: 20px;
     
-        ul {
-            display: none;
+        #menu {
+            display: flex;
+            justify-content: space-between;
             list-style: none;
             gap: 25px;
+            transition: 1s;
     
             li a {
-                padding: 5px 10px;
+                padding: 0;
                 color: $white-color;
                 text-decoration: none;
+                text-align: center;
     
-                font-size: 1em;
+                font-size: .8rem;
                 font-weight: 300;
     
                 border-radius: 50px;
                 transition: .5s;
     
                 &:hover {
-                    background-color: ($btn-color);
-                    box-shadow: 0px 0px 1ch 0px rgba(157,255,255,1);
-                    color: $secondary-color;
+                    background: none;
+                    box-shadow: none;
+                    color: $white-color;
                 }
     
                 &.active {
-                    background-color: $btn-color;
-                    box-shadow: 0px 0px 1ch 0px rgba(157,255,255,1);
-                    color: $secondary-color;
+                    background: none;
+                    box-shadow: none;
+                    color: $white-color;
                 }
             }
         }
     
         #logo {
             width: 200px;
+        }
+
+        #btn-menu {
+            cursor: pointer;
+            display: block;
+            color: $white-color;
         }
     
     }

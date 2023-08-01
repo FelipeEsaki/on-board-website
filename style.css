@@ -6,12 +6,12 @@ header {
   align-items: center;
   padding: 60px 0;
 }
-header ul {
+header #menu {
   display: flex;
   list-style: none;
   gap: 25px;
 }
-header ul li a {
+header #menu li a {
   padding: 5px 10px;
   color: #fff;
   text-decoration: none;
@@ -20,12 +20,12 @@ header ul li a {
   border-radius: 50px;
   transition: 0.5s;
 }
-header ul li a:hover {
+header #menu li a:hover {
   background-color: #27ffff;
   box-shadow: 0px 0px 1ch 0px rgb(157, 255, 255);
   color: #021941;
 }
-header ul li a.active {
+header #menu li a.active {
   background-color: #27ffff;
   box-shadow: 0px 0px 1ch 0px rgb(157, 255, 255);
   color: #021941;
@@ -33,41 +33,54 @@ header ul li a.active {
 header #logo {
   width: 200px;
 }
+header #btn-menu {
+  display: none;
+}
 
 @media (max-width: 480px) {
   header {
     margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 60px 0;
+    padding: 40px 0;
+    gap: 20px;
   }
-  header ul {
-    display: none;
+  header #menu {
+    display: flex;
+    justify-content: space-between;
     list-style: none;
     gap: 25px;
+    transition: 1s;
   }
-  header ul li a {
-    padding: 5px 10px;
+  header #menu li a {
+    padding: 0;
     color: #fff;
     text-decoration: none;
-    font-size: 1em;
+    text-align: center;
+    font-size: 0.8rem;
     font-weight: 300;
     border-radius: 50px;
     transition: 0.5s;
   }
-  header ul li a:hover {
-    background-color: #27ffff;
-    box-shadow: 0px 0px 1ch 0px rgb(157, 255, 255);
-    color: #021941;
+  header #menu li a:hover {
+    background: none;
+    box-shadow: none;
+    color: #fff;
   }
-  header ul li a.active {
-    background-color: #27ffff;
-    box-shadow: 0px 0px 1ch 0px rgb(157, 255, 255);
-    color: #021941;
+  header #menu li a.active {
+    background: none;
+    box-shadow: none;
+    color: #fff;
   }
   header #logo {
     width: 200px;
+  }
+  header #btn-menu {
+    cursor: pointer;
+    display: block;
+    color: #fff;
   }
 }
 body {
@@ -263,7 +276,7 @@ body .div1 .img #tablet:hover {
     margin: 0 20px;
   }
   body .div1 {
-    margin: 40px 0;
+    margin: 20px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
